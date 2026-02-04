@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue_primary">#0033A0</color>
+    <color name="blue_secondary">#42A5F5</color>
+    <color name="blue_accent">#90CAF9</color>
+
+    <color name="blue_primary_dark">#001F66</color>
+    <color name="blue_secondary_dark">#1A5DBF</color>
+    <color name="blue_accent_dark">#1565C0</color>
+
+
+    <color name="background_dark">#121212</color>
+    <color name="text_primary_dark">#E0E0E0</color>
+    <color name="text_secondary_dark">#B0B0B0</color>
+
+</resources>
