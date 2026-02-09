@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_accent"
+    android:background="@color/blue_secondary"
     tools:context=".ServiciosActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
-        app:layoutManager="LinearLayoutManager"
-        android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager" />
 
     <ImageButton
         android:id="@+id/btn_logout"
@@ -24,6 +23,8 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/salir"
         android:src="@drawable/ic_logout"
-        app:tint="@color/white" />
+        app:tint="@color/white"
+        android:translationY="16dp"
+        />
 
 </FrameLayout>

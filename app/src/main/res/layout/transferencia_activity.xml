@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:paddingTop="80dp"
+
     tools:context=".TransferenciaActivity">
 
     <ImageButton
@@ -13,70 +14,75 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_margin="12dp"
+        android:layout_marginTop="24dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Salir"
         android:src="@drawable/ic_logout"
-        app:tint="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:tint="?attr/colorPrimary"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_transferencia"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="64dp"
+        app:cardBackgroundColor="?attr/colorPrimary"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
-        app:cardBackgroundColor="?attr/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@id/btn_logout"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/btn_logout">
 
-        <LinearLayout
+
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
 
 
-            <EditText
-                android:id="@+id/edit_cuenta_destino"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/Destino_de_transferencia"
-                android:inputType="text"
-                android:textColor="?attr/colorOnPrimary"
-                android:textColorHint="?attr/colorOnPrimary"
-                android:layout_marginBottom="12dp" />
+        <EditText
+            android:id="@+id/edit_cuenta_destino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="@string/Destino_de_transferencia"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textColorHint="?attr/colorOnPrimary" />
 
 
-            <EditText
-                android:id="@+id/plain_text_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/cuanto_vas_a_transferir"
-                android:inputType="numberDecimal"
-                android:textColor="?attr/colorOnPrimary"
-                android:textColorHint="?attr/colorOnPrimary" />
+        <EditText
+            android:id="@+id/plain_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cuanto_vas_a_transferir"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textColorHint="?attr/colorOnPrimary" />
 
             <TextView
                 android:id="@+id/Pregunta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:buttonTint="?attr/colorTertiary"
                 android:text="@string/tipo_de_transferencia"
                 android:textColor="?attr/colorOnPrimary"
-                android:buttonTint="?attr/colorTertiary"
-                android:textSize="16sp"
-                android:layout_marginTop="12dp" />
+                android:textSize="16sp" />
 
 
             <RadioGroup
                 android:id="@+id/tipo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/paypal4"
@@ -100,14 +106,15 @@
                     android:textColor="?attr/colorOnPrimary" />
             </RadioGroup>
 
-            <Switch
-                android:id="@+id/round_up_switch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:checked="true"
-                android:text="@string/redondear"
-                android:textColor="?attr/colorTertiary" />
+        <Switch
+            android:id="@+id/round_up_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:text="@string/redondear"
+            android:textColor="?attr/colorTertiary" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

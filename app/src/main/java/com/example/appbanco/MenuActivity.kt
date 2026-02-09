@@ -1,6 +1,7 @@
 package com.example.appbanco
 
 import android.content.Intent
+import android.media.Image
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
@@ -32,13 +33,13 @@ class MenuActivity : AppCompatActivity() {
         btnvolver.setOnClickListener {
             startActivity((Intent(this, SessionActivity::class.java)))
         }
-        val btnTelefono = findViewById<Button>(R.id.Telefono)
+        val btnTelefono = findViewById<ImageButton>(R.id.Telefono)
         btnTelefono.setOnClickListener {
             val phoneUri = Uri.parse("tel:912345678")
             val intent = Intent(Intent.ACTION_DIAL, phoneUri)
             startActivity(intent)
         }
-        val btnUbicacion = findViewById<Button>(R.id.ubicacion)
+        val btnUbicacion = findViewById<ImageButton>(R.id.ubicacion)
         btnUbicacion.setOnClickListener {
             val locationUri = Uri.parse("geo:0,0?q=BBVA Sevilla")
             val intent = Intent(Intent.ACTION_VIEW, locationUri)

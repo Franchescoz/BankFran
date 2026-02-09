@@ -7,13 +7,15 @@
     android:layout_height="match_parent"
     android:background="@color/blue_accent"
     android:padding="16dp"
+
     tools:context=".TransferenciaActivity">
 
     <ImageButton
         android:id="@+id/btn_logout"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_margin="12dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="12dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Salir"
         android:src="@drawable/ic_logout"
@@ -22,22 +24,22 @@
         app:tint="@color/blue_primary"
         tools:ignore="TouchTargetSizeCheck" />
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_texts"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="48dp"
         app:cardBackgroundColor="?attr/colorOnPrimary"
         app:cardCornerRadius="16dp"
-        app:layout_constraintTop_toBottomOf="@id/btn_logout"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:cardElevation="8dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_logout">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="24dp">
 
@@ -45,31 +47,31 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/bienvenido_francisco"
                 android:textAlignment="center"
                 android:textColor="?attr/colorPrimary"
-                android:textSize="48sp"
-                android:layout_gravity="center_horizontal" />
+                android:textSize="48sp" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
                 android:text="@string/a_tu_banco_de_confianza"
                 android:textColor="?attr/colorPrimary"
-                android:textSize="24sp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="12dp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
                 android:text="@string/qu_quieres_hacer_ahora"
                 android:textColor="?attr/colorPrimary"
-                android:textSize="24sp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="12dp" />
+                android:textSize="24sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -78,13 +80,14 @@
         android:id="@+id/btn_perfil"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="@color/blue_primary"
         android:text="@string/perfil_de_la_cuenta"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/card_texts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/card_texts" />
 
     <Button
         android:id="@+id/btn_servicios"
@@ -110,31 +113,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/Telefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/blue_accent"
-        android:text="@string/_912345678"
-        android:textColor="@color/blue_accent_dark"
-        android:textSize="20sp"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="120dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/_912345678"
+        android:src="@drawable/baseline_smartphone_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/blue_accent_dark"
+        tools:ignore="TouchTargetSizeCheck" />
 
-    <Button
+    <ImageButton
         android:id="@+id/ubicacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/blue_accent"
-        android:text="@string/sedes"
-        android:textColor="@color/blue_accent_dark"
-        android:textSize="20sp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="120dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/sedes"
+        android:src="@drawable/outline_add_location_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/blue_accent_dark"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
