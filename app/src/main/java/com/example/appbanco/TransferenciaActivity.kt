@@ -25,7 +25,7 @@ class TransferenciaActivity: AppCompatActivity() {
 
     fun calculateTip() {
 
-        // 👉 NUEVO: validar cuenta destino
+     
         val cuentaDestino = binding.editCuentaDestino.text.toString()
         if (cuentaDestino.isEmpty()) {
             binding.editCuentaDestino.error = "Introduce la cuenta destino"
